@@ -1,0 +1,13 @@
+h1 {
+    text-align: center;
+}
+
+.field {
+    display: block;
+    margin: 20px;
+}
+
+.button {
+    display: flex;
+    justify-content: space-between;
+}
