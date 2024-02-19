@@ -1,7 +1,7 @@
-const express = require('../node_modules/express');
+const express = require('express');
 const app = express();
 
-const XLSX = require("../node_modules/xlsx");
+const XLSX = require("xlsx");
 
 app.set("view engine", "ejs");
 
@@ -9,5 +9,9 @@ app.get("/", (req, res) => {
     console.log("here");
     res.render("index", { text: "world" });
 });
+
+const userRouter = require("./routes/users");
+
+app.use("/users", userRouter);
 
 app.listen(3000);
